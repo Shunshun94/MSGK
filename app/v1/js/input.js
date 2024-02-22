@@ -3,7 +3,7 @@ MSGK.INPUT = MSGK.INPUT || {};
 
 MSGK.INPUT.CONSTS = {
     TABLE_CLASS: 'consensus-contents',
-    UPDATE_EVENT: 'MSGK_INPUT_UPDATE'
+    UPDATE_EVENT: 'MSGK_INPUT_UPDATE',
 };
 
 MSGK.INPUT.DOMS = {
@@ -22,7 +22,7 @@ MSGK.INPUT.appendLine = (e) => {
         </select>`,
         `<input type="text" class="${contentClass}-target" list="${contentClass}-targetlist" />`,
         `<input type="text" class="${contentClass}-content" />`,
-        `<input type="text" class="${contentClass}-note" />`,
+        `<input type="text" class="${contentClass}-detail" />`,
     ].forEach((content)=>{
         const td = document.createElement('td');
         td.innerHTML = content;
@@ -47,7 +47,7 @@ MSGK.INPUT.bindEvents = () => {
 MSGK.INPUT.getCardInfo = () => {
     const table = MSGK.INPUT.DOMS.TABLE;
     const contentClass = `${MSGK.INPUT.CONSTS.TABLE_CLASS}-content`;
-    const columns = ['okng', 'target', 'content', 'note'];
+    const columns = ['okng', 'target', 'content', 'detail'];
     const result = [];
     columns.forEach((column, i)=>{
         const vals = Array.from(table.getElementsByClassName(`${contentClass}-${column}`)).map((element)=>{ return element.value; });

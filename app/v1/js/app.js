@@ -5,5 +5,6 @@ MSGK.INPUT.initialize();
 
 document.getElementsByClassName('input')[0].addEventListener(MSGK.INPUT.CONSTS.UPDATE_EVENT, (e)=>{
     const cards = MSGK.INPUT.getCardInfo();
+    MSGK.OUTPUT.buildOutput(cards);
 });
 
