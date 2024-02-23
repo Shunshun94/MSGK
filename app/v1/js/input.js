@@ -66,7 +66,23 @@ MSGK.INPUT.onUpdate = (e) => {
     MSGK.INPUT.DOMS.TABLE.dispatchEvent(event);
 };
 
+MSGK.INPUT.buildTargetList = () => {
+    const datalist = document.createElement('datalist');
+    datalist.id = `${MSGK.INPUT.CONSTS.TABLE_CLASS}-content-targetlist`;
+    [
+        '自分のPCが', '自分以外のPCが', '自分を含むPCが',
+        '自分のPCと親密な相手が', '自分以外のPCと親密な相手が', '自分を含むPCと親密な相手が',
+        '主要なNPCが', '全てのNPCが', '全てのキャラクターについて', 'あらゆる場面について'
+    ].forEach((d)=>{
+        const option = document.createElement('option');
+        option.value = d;
+        datalist.appendChild(option);
+    });
+    document.getElementsByClassName('input')[0].append(datalist);
+};
+
 MSGK.INPUT.initialize = () => {
+    MSGK.INPUT.buildTargetList();
     MSGK.INPUT.appendLine();
     MSGK.INPUT.bindEvents();
 };
