@@ -10,7 +10,7 @@ document.getElementsByClassName('input')[0].addEventListener(MSGK.INPUT.CONSTS.U
 });
 
 document.getElementsByClassName('output')[0].addEventListener(MSGK.OUTPUT.CONSTS.SAVE_EVENT, (e)=>{
-    html2canvas(document.getElementsByClassName('output')[0]).then(canvas => {
+    html2canvas(document.getElementsByClassName('output-cards')[0]).then(canvas => {
         let downloadEle = document.createElement("a");
         downloadEle.href = canvas.toDataURL("image/png");
         downloadEle.download = `consensus_card.png`;
