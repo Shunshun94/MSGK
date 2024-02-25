@@ -13,7 +13,7 @@ document.getElementsByClassName('output')[0].addEventListener(MSGK.OUTPUT.CONSTS
     html2canvas(document.getElementsByClassName('output')[0]).then(canvas => {
         let downloadEle = document.createElement("a");
         downloadEle.href = canvas.toDataURL("image/png");
-        downloadEle.download = document.getElementById(`magicContent_${number}`).title + '.png';
+        downloadEle.download = `consensus_card.png`;
         downloadEle.click();
         downloadEle.remove();
     });
