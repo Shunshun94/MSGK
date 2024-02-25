@@ -9,7 +9,7 @@ body {
     padding:8px;
 }
 
-.output {
+.output-cards {
     display: flex;
     flex-wrap: wrap;
     padding: 8px;
