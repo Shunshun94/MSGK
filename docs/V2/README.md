@@ -1,3 +1,3 @@
 # MSGK v2
 
-[コンセプト](../concept.md)
+[コンセプト](./concept.md)
