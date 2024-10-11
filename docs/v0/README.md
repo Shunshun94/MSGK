@@ -1,6 +1,8 @@
 # Missmatch and Strife Guarding Kit
 コンセンサス共有サービス MSGK
 
+実際に作ったわけじゃないけど初期案。
+
 ## 単語
 
 ### コンセンサス
